@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://menu.gd" id="1_8b5kp"]
 [ext_resource type="FontFile" uid="uid://dgba8l3ee6gl6" path="res://Xolonium-Regular.ttf" id="1_h5ml1"]
-[ext_resource type="Texture2D" uid="uid://kw8ui6gecsue" path="res://backgrounds/2qm3jz0bevf91.webp" id="1_nnf5m"]
+[ext_resource type="Texture2D" uid="uid://kw8ui6gecsue" path="res://backgrounds/menuBackground/2qm3jz0bevf91.webp" id="1_nnf5m"]
 
 [node name="Menu" type="CanvasLayer"]
 script = ExtResource("1_8b5kp")
@@ -75,3 +75,6 @@ theme_override_fonts/font = ExtResource("1_h5ml1")
 theme_override_font_sizes/font_size = 25
 text = "Instructions"
 metadata/_edit_use_anchors_ = true
+
+[connection signal="item_selected" from="StageOptions" to="." method="_on_stage_options_item_selected"]
+[connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]

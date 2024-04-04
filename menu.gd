@@ -1,5 +1,5 @@
 extends CanvasLayer
-
+var selected_option = -1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,3 +9,24 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_start_game_button_pressed():
+	if selected_option != -1:
+		get_tree().change_scene_to_file(get_scene_path(selected_option))
+	else:
+		print("No option selected")
+
+
+func _on_stage_options_item_selected(index):
+	selected_option = index
+
+func get_scene_path(index):
+	match index:
+		0:
+			return "res://level_1.tscn"
+		1:
+			return "res://level_2.tscn"
+		2:
+			return "res://level_3.tscn"
+	return ""
