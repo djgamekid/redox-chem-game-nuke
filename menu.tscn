@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxx6n4sr5i0tp"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_8b5kp"]
-[ext_resource type="FontFile" uid="uid://dgba8l3ee6gl6" path="res://backgrounds/Xolonium-Regular.ttf" id="1_h5ml1"]
+[ext_resource type="FontFile" uid="uid://dgba8l3ee6gl6" path="res://Xolonium-Regular.ttf" id="1_h5ml1"]
 [ext_resource type="Texture2D" uid="uid://kw8ui6gecsue" path="res://backgrounds/2qm3jz0bevf91.webp" id="1_nnf5m"]
 
 [node name="Menu" type="CanvasLayer"]
