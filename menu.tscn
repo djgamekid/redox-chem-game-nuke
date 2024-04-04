@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxx6n4sr5i0tp"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_8b5kp"]
+[ext_resource type="FontFile" uid="uid://dgba8l3ee6gl6" path="res://backgrounds/Xolonium-Regular.ttf" id="1_h5ml1"]
+[ext_resource type="Texture2D" uid="uid://kw8ui6gecsue" path="res://backgrounds/2qm3jz0bevf91.webp" id="1_nnf5m"]
+
+[node name="Menu" type="CanvasLayer"]
+script = ExtResource("1_8b5kp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -31.0
+offset_top = 2.0
+offset_right = 1188.0
+offset_bottom = 653.0
+texture = ExtResource("1_nnf5m")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_top = 0.0123457
+anchor_right = 1.00087
+anchor_bottom = 0.106481
+theme_override_fonts/font = ExtResource("1_h5ml1")
+theme_override_font_sizes/font_size = 50
+text = "Redox: Protect the World"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="StageOptions" type="OptionButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.5
+offset_top = -33.5
+offset_right = 146.5
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+item_count = 3
+popup/item_0/text = "Level 1"
+popup/item_0/id = 0
+popup/item_1/text = "Level 2"
+popup/item_1/id = 1
+popup/item_2/text = "Level 3"
+popup/item_2/id = 2
+
+[node name="StartGameButton" type="Button" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.419705
+anchor_top = 0.847222
+anchor_right = 0.580295
+anchor_bottom = 0.935185
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_h5ml1")
+theme_override_font_sizes/font_size = 25
+text = "Start Game"
+metadata/_edit_use_anchors_ = true
+
+[node name="InstructionsButton" type="Button" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.833333
+anchor_top = 0.854938
+anchor_right = 0.979167
+anchor_bottom = 0.958333
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_h5ml1")
+theme_override_font_sizes/font_size = 25
+text = "Instructions"
+metadata/_edit_use_anchors_ = true

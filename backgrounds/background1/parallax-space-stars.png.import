@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ebarkye8fven"
-path="res://.godot/imported/parallax-space-big-planet.png-3e1c7376d22f1dcb8e9a6889a527b89e.ctex"
+uid="uid://cv1ry23v2r58h"
+path="res://.godot/imported/parallax-space-stars.png-f5b542bcc1666356500b7b5698c160f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://backgrounds/parallax-space-big-planet.png"
-dest_files=["res://.godot/imported/parallax-space-big-planet.png-3e1c7376d22f1dcb8e9a6889a527b89e.ctex"]
+source_file="res://backgrounds/background1/parallax-space-stars.png"
+dest_files=["res://.godot/imported/parallax-space-stars.png-f5b542bcc1666356500b7b5698c160f5.ctex"]
 
 [params]
 
