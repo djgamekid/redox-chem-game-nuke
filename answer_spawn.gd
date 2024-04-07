@@ -208,8 +208,8 @@ var level2 = {
 		"redox": "Yes",
 		"oxidized": "CH2O",
 		"reduced": "O2",
-		"incorrect1": "",
-		"incorrect2": ""
+		"incorrect1": "CO2",
+		"incorrect2": "H2O"
 	},
 	
 	"2" = {
@@ -217,8 +217,8 @@ var level2 = {
 		"redox": "Yes",
 		"oxidized": "KC8H5O4",
 		"reduced": "Mn2(SO4)3",
-		"incorrect1": "",
-		"incorrect2": ""
+		"incorrect1": "H2O",
+		"incorrect2": "CO2"
 	},
 	
 	"3" = {
@@ -226,8 +226,8 @@ var level2 = {
 		"redox": "Yes",
 		"oxidized": "KC8H5O4",
 		"reduced": "K2Cr2O7",
-		"incorrect1": "",
-		"incorrect2": ""
+		"incorrect1": "H2SO4",
+		"incorrect2": "KHSO4"
 	},
 	
 	"4" = {
@@ -235,8 +235,8 @@ var level2 = {
 		"redox": "Yes",
 		"oxidized": "Cl-",
 		"reduced": "O2",
-		"incorrect1": "",
-		"incorrect2": ""
+		"incorrect1": "H+",
+		"incorrect2": "H2O"
 	},
 	
 	"5" = {
@@ -244,8 +244,8 @@ var level2 = {
 		"redox": "Yes",
 		"oxidized": "FeS2",
 		"reduced": "FeS2 and O2",
-		"incorrect1": "",
-		"incorrect2": ""
+		"incorrect1": "H2O",
+		"incorrect2": "Fe2(SO4)3"
 	},
 	
 	"6" = {
@@ -253,8 +253,8 @@ var level2 = {
 		"redox": "Yes",
 		"oxidized": "Some of the carbon in CH2O",
 		"reduced": "Some of the carbon in CH2O",
-		"incorrect1": "",
-		"incorrect2": ""
+		"incorrect1": "CH4",
+		"incorrect2": "CO2"
 	},
 	
 	"7" = {
@@ -262,8 +262,8 @@ var level2 = {
 		"redox": "Yes",
 		"oxidized": "N2",
 		"reduced": "O2",
-		"incorrect1": "",
-		"incorrect2": ""
+		"incorrect1": "NO",
+		"incorrect2": "O"
 	},
 	
 	"8" = {
@@ -271,8 +271,8 @@ var level2 = {
 		"redox": "Yes",
 		"oxidized": "N2",
 		"reduced": "O2",
-		"incorrect1": "",
-		"incorrect2": ""
+		"incorrect1": "H2O",
+		"incorrect2": "HNO3"
 	},
 	
 	"9" = {
@@ -280,8 +280,8 @@ var level2 = {
 		"redox": "Yes",
 		"oxidized": "S (s)",
 		"reduced": "O2",
-		"incorrect1": "",
-		"incorrect2": ""
+		"incorrect1": "H2O",
+		"incorrect2": "H2SO4"
 	},
 	
 	"10" = {
@@ -289,8 +289,8 @@ var level2 = {
 		"redox": "Yes",
 		"oxidized": "Carbon in CH4",
 		"reduced": "O2",
-		"incorrect1": "",
-		"incorrect2": ""
+		"incorrect1": "CO2",
+		"incorrect2": "H2O"
 	},
 	
 	"11" = {
@@ -298,8 +298,8 @@ var level2 = {
 		"redox": "Yes",
 		"oxidized": "Oxygen in CO2 and in H20",
 		"reduced": "Carbon in CO2",
-		"incorrect1": "",
-		"incorrect2": ""
+		"incorrect1": "C6H12O6",
+		"incorrect2": "O2"
 	},
 	
 	"12" = {
@@ -307,8 +307,8 @@ var level2 = {
 		"redox": "Yes",
 		"oxidized": "Fe (s)",
 		"reduced": "Chlorine in HClO",
-		"incorrect1": "",
-		"incorrect2": ""
+		"incorrect1": "H+",
+		"incorrect2": "Fe2+"
 	},
 	
 	"13" = {
@@ -316,8 +316,8 @@ var level2 = {
 		"redox": "Yes",
 		"oxidized": "Pb (s)",
 		"reduced": "Chlorine in HClO",
-		"incorrect1": "",
-		"incorrect2": ""
+		"incorrect1": "H+",
+		"incorrect2": "Pb2+"
 	},
 	
 	"14" = {
@@ -325,26 +325,20 @@ var level2 = {
 		"redox": "Yes",
 		"oxidized": "Fe2+",
 		"reduced": "O2",
-		"incorrect1": "",
-		"incorrect2": ""
+		"incorrect1": "H+",
+		"incorrect2": "Fe3+"
 	},
 	
 	"15" = {
 		"chemicalEquation": "𝐶𝑑𝐶𝑙2(𝑎𝑞) + 𝑁𝑎2𝑆(𝑎𝑞) → 𝐶𝑑𝑆(𝑠) + 2𝑁𝑎𝐶𝑙(𝑎𝑞)",
 		"redox": "No",
-		"oxidized": "",
-		"reduced": "",
-		"incorrect1": "",
-		"incorrect2": ""
+		"reaction": "This is a precipitation reaction"
 	},
 	
 	"16" = {
 		"chemicalEquation": "2𝑍𝑛𝑆(𝑠) + 2𝐻𝐶𝑙(𝑎𝑞) → 𝑍𝑛𝐶𝑙2(𝑎𝑞) + 𝐻2𝑆(𝑔)",
 		"redox": "No",
-		"oxidized": "",
-		"reduced": "",
-		"incorrect1": "",
-		"incorrect2": ""
+		"reaction": "This is an acid-base reaction"
 	}
 }
 @onready var path = $MobPath
