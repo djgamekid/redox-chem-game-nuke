@@ -24,12 +24,12 @@ func _on_stage_options_item_selected(index):
 func get_scene_path(index):
 	match index:
 		0:
-			GlobalVars.levelSelected == 1
+			GlobalVars.levelSelected = 1
 			return "res://level_1.tscn"
 		1:
-			GlobalVars.levelSelected == 2
+			GlobalVars.levelSelected = 2
 			return "res://level_2.tscn"
 		2:
-			GlobalVars.levelSelected == 3
+			GlobalVars.levelSelected = 3
 			return "res://level_3.tscn"
 	return ""

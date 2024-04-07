@@ -5,16 +5,15 @@
 
 [sub_resource type="Curve2D" id="Curve2D_t1bcr"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 45, -50, 0, 0, 0, 0, 1114, -52, 0, 0, 0, 0, 1120, -48, 0, 0, 0, 0, 1120, -48, 0, 0, 0, 0, 1120, -48, 0, 0, 0, 0, 1120, -48)
+"points": PackedVector2Array(0, 0, 0, 0, 45, -50, 0, 0, 0, 0, 1114, -52)
 }
-point_count = 6
+point_count = 2
 
 [node name="AnswerSpawn" type="Node2D"]
 script = ExtResource("1_vwc8m")
 Answers = ExtResource("2_6541h")
 
 [node name="MobPath" type="Path2D" parent="."]
-scale = Vector2(0.9, 0.9)
 curve = SubResource("Curve2D_t1bcr")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
@@ -25,19 +24,7 @@ rotation = -0.00187091
 offset_left = 727.0
 offset_top = 3.0
 offset_right = 1156.0
-offset_bottom = 104.0
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="CompoundLabel" type="Label" parent="."]
-texture_filter = 1
-offset_left = 968.0
-offset_top = 96.0
-offset_right = 1012.0
-offset_bottom = 131.0
-scale = Vector2(3.86709, 2.1662)
-theme_override_font_sizes/font_size = 15
-horizontal_alignment = 1
+offset_bottom = 73.0
 
 [node name="StartButton" type="Button" parent="."]
 anchors_preset = -1
@@ -47,7 +34,6 @@ offset_right = 681.0
 offset_bottom = 353.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Start Level"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
