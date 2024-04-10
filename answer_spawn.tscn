@@ -6,22 +6,22 @@
 
 [sub_resource type="Curve2D" id="Curve2D_t1bcr"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 45, -50, 0, 0, 0, 0, 1114, -52, 0, 0, 0, 0, 1120, -48, 0, 0, 0, 0, 1120, -48, 0, 0, 0, 0, 1120, -48, 0, 0, 0, 0, 1120, -48, 0, 0, 0, 0, 45, -50)
+"points": PackedVector2Array(0, 0, 0, 0, -28.5714, -265.332, 0, 0, 0, 0, 531.429, -52, 0, 0, 0, 0, 1251.43, -265.332, 0, 0, 0, 0, -28.5714, -265.332)
 }
-point_count = 7
+point_count = 4
 
 [node name="AnswerSpawn" type="Node2D"]
 script = ExtResource("1_vwc8m")
 Answers = ExtResource("2_fxttj")
 
 [node name="MobPath" type="Path2D" parent="."]
-position = Vector2(148, 1)
-scale = Vector2(0.7, 0.7)
+position = Vector2(148, -39.8)
+scale = Vector2(0.7, -0.150001)
 curve = SubResource("Curve2D_t1bcr")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
-position = Vector2(45, -50)
-rotation = -0.00187091
+position = Vector2(-28.5714, -265.332)
+rotation = 0.363977
 
 [node name="QuestionLabel" type="Label" parent="."]
 offset_left = 727.0
