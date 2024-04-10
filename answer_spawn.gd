@@ -1,7 +1,6 @@
 extends Node2D
 
 @export var Answers: PackedScene
-var questionSet
 var level1 = {
 	"question" = "Assign oxidation numbers to each atom in the following compounds and ions.",
 	
@@ -341,8 +340,10 @@ var level2 = {
 		"reaction": "This is an acid-base reaction"
 	}
 }
-@onready var path = $MobPath
-@onready var path_follow = $MobPath/MobSpawnLocation
+var questionSet
+var count = 1
+var answersPrintedCount = 0
+var answers_scene = preload("res://Answers.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -351,17 +352,53 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
+	
 func updateLvl1QuestionsAnswers():
-	var answers_scene = preload("res://Answers.tscn")
+	#set question and compund for question
 	$QuestionLabel.text = (questionSet["question"])
-	$CompoundLabel.text = (questionSet["1"]["compound"])
-	for i in range(4):
-		var answers_instance = answers_scene.instance()
-		path_follow.add_child(answers_instance)
-		answers_instance.offset += i * 3 
-   
-
+	$CompoundLabel.text = (questionSet[str(count)]["compound"])
+	
+	#Instantiate answers_scene for correct and incorrect
+	var correctAnswer = answers_scene.instantiate()
+	var incorrectAnswer1 = answers_scene.instantiate()
+	var incorrectAnswer2 = answers_scene.instantiate()
+	var incorrectAnswer3 = answers_scene.instantiate()
+	
+	# Get a reference to the Label node
+	var correctAnswerLabel = correctAnswer.get_node("Label")
+	var incorrectAnswerLabel1 = incorrectAnswer1.get_node("Label")
+	var incorrectAnswerLabel2 = incorrectAnswer2.get_node("Label")
+	var incorrectAnswerLabel3 = incorrectAnswer3.get_node("Label")
+	
+	#Add answers to label
+	correctAnswerLabel.text = (questionSet[str(count)]["correct"])
+	incorrectAnswerLabel1.text = (questionSet[str(count)]["incorrect1"])
+	incorrectAnswerLabel2.text = (questionSet[str(count)]["incorrect2"])
+	incorrectAnswerLabel3.text = (questionSet[str(count)]["incorrect3"])
+	
+	var mob_spawn_location = get_node("MobPath/MobSpawnLocation")
+	
+	mob_spawn_location.progress_ratio = randf()
+	correctAnswer.position = mob_spawn_location.position
+	
+	mob_spawn_location.progress_ratio = randf()
+	incorrectAnswer1.position = mob_spawn_location.position
+	
+	mob_spawn_location.progress_ratio = randf()
+	incorrectAnswer2.position = mob_spawn_location.position
+	
+	mob_spawn_location.progress_ratio = randf()
+	incorrectAnswer3.position = mob_spawn_location.position
+	
+	var children = [correctAnswer, incorrectAnswer1, incorrectAnswer2, incorrectAnswer3]
+	
+	children.shuffle()
+	
+	for child in children:
+		add_child(child)
+		print(child)
+		await get_tree().create_timer(2.0).timeout # Wait for 2 seconds
+		
 func _on_start_button_pressed():
 	$StartButton.hide()
 	if GlobalVars.levelSelected == 1:
