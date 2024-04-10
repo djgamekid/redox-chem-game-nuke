@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://ccxoogwvxqww5"]
 
-[ext_resource type="Script" path="res://Answers.gd" id="1_ikbap"]
+[ext_resource type="Script" path="res://incorrect_answers.gd" id="1_xsgax"]
 
-[node name="Answers" type="Node2D"]
+[node name="IncorrectAnswers" type="Area2D"]
 position = Vector2(4, 18)
-script = ExtResource("1_ikbap")
+script = ExtResource("1_xsgax")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 105.0

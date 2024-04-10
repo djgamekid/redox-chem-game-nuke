@@ -341,9 +341,10 @@ var level2 = {
 	}
 }
 var questionSet
-var count = 1
+var count = 23
 var answersPrintedCount = 0
-var answers_scene = preload("res://Answers.tscn")
+var correct_answers_scene = preload("res://correct_answers.tscn")
+var incorrect_answers_scene = preload("res://incorrect_answers.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -359,10 +360,11 @@ func updateLvl1QuestionsAnswers():
 	$CompoundLabel.text = (questionSet[str(count)]["compound"])
 	
 	#Instantiate answers_scene for correct and incorrect
-	var correctAnswer = answers_scene.instantiate()
-	var incorrectAnswer1 = answers_scene.instantiate()
-	var incorrectAnswer2 = answers_scene.instantiate()
-	var incorrectAnswer3 = answers_scene.instantiate()
+	var tag: String = ""
+	var correctAnswer = correct_answers_scene.instantiate()
+	var incorrectAnswer1 = incorrect_answers_scene.instantiate()
+	var incorrectAnswer2 = incorrect_answers_scene.instantiate()
+	var incorrectAnswer3 = incorrect_answers_scene.instantiate()
 	
 	# Get a reference to the Label node
 	var correctAnswerLabel = correctAnswer.get_node("Label")
@@ -398,8 +400,11 @@ func updateLvl1QuestionsAnswers():
 		print(child)
 		await get_tree().create_timer(2.0).timeout # Wait for 2 seconds
 	
-	count += 1 #Update Question count
-	
+	if count < 24:
+		count += 1 #Update Question count
+	else:
+		get_tree().change_scene_to_file("res://game_over.tscn")
+		
 func _on_start_button_pressed():
 	$StartButton.hide()
 	if GlobalVars.levelSelected == 1:
