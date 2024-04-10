@@ -378,27 +378,28 @@ func updateLvl1QuestionsAnswers():
 	
 	var mob_spawn_location = get_node("MobPath/MobSpawnLocation")
 	
+	#Set randrom spawn location for each answer along MobPath
 	mob_spawn_location.progress_ratio = randf()
 	correctAnswer.position = mob_spawn_location.position
-	
 	mob_spawn_location.progress_ratio = randf()
 	incorrectAnswer1.position = mob_spawn_location.position
-	
 	mob_spawn_location.progress_ratio = randf()
 	incorrectAnswer2.position = mob_spawn_location.position
-	
 	mob_spawn_location.progress_ratio = randf()
 	incorrectAnswer3.position = mob_spawn_location.position
 	
+	#Randomize order in which they spawn
 	var children = [correctAnswer, incorrectAnswer1, incorrectAnswer2, incorrectAnswer3]
-	
 	children.shuffle()
 	
+	#Spawn each question with a 2 second delay
 	for child in children:
 		add_child(child)
 		print(child)
 		await get_tree().create_timer(2.0).timeout # Wait for 2 seconds
-		
+	
+	count += 1 #Update Question count
+	
 func _on_start_button_pressed():
 	$StartButton.hide()
 	if GlobalVars.levelSelected == 1:
