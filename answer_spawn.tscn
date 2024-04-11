@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://coom2gtmojaa0"]
 
 [ext_resource type="Script" path="res://answer_spawn.gd" id="1_vwc8m"]
-[ext_resource type="PackedScene" uid="uid://ccxoogwvxqww5" path="res://incorrect_answers.tscn" id="2_fxttj"]
+[ext_resource type="PackedScene" uid="uid://cdgthhrur7ktf" path="res://Answers.tscn" id="2_fxttj"]
 [ext_resource type="FontFile" uid="uid://dgba8l3ee6gl6" path="res://Xolonium-Regular.ttf" id="3_8gdoj"]
 
 [sub_resource type="Curve2D" id="Curve2D_t1bcr"]
