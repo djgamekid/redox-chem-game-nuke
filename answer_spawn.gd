@@ -397,7 +397,6 @@ func updateLvl1QuestionsAnswers():
 	#Spawn each question with a 2 second delay
 	for child in children:
 		add_child(child)
-		print(child)
 		await get_tree().create_timer(2.0).timeout # Wait for 2 seconds
 	
 	if count < 24:
