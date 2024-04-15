@@ -66,3 +66,61 @@ offset_top = -820.0
 offset_right = 2056.0
 offset_bottom = 1547.0
 texture = ExtResource("3_i5axn")
+
+[node name="PauseButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 98.0
+offset_bottom = 101.0
+text = "|| "
+
+[node name="ResumeButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 380.0
+offset_top = 424.0
+offset_right = 728.0
+offset_bottom = 515.0
+text = "Resume"
+
+[node name="HelpButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 362.0
+offset_top = 292.0
+offset_right = 741.0
+offset_bottom = 389.0
+text = "Instructions"
+
+[node name="HelpOkButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 268.0
+offset_top = 562.0
+offset_right = 834.0
+offset_bottom = 643.0
+text = "Close"
+
+[node name="HelpMessage" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 212.0
+offset_top = 52.0
+offset_right = 892.0
+offset_bottom = 502.0
+text = "Welcome to \"Redox: Protect The World\" - Your Comprehensive Guide!
+
+Introduction & Mastering the Controls:
+Embark on an unparalleled journey through a world where skill and knowledge pave the path to victory. To navigate this realm:
+
+Movement: Use A and S to stride left or right through the game's landscapes.
+Combat: Press the spacebar to unleash a barrage of attacks on your foes.
+Grasp these controls firmly, for they are the foundation of your success.
+Level 2 - The Equation's Secret:
+The journey deepens into the realms of science, where the left side of the equation holds the key to advancement. Observation and analysis will reveal the secrets needed to conquer this stage and forge onward.
+
+Remember, every challenge is an opportunity to grow both in the game and intellectually. Embrace the adventure, for your journey to mastery and enlightenment begins now!"
+
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="HelpOkButton" to="." method="_on_help_ok_button_pressed"]
