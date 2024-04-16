@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://2tvohq7u2ygs"]
+[gd_scene load_steps=8 format=3 uid="uid://b21rqj8enfvc2"]
 
 [ext_resource type="Texture2D" uid="uid://cjjotyn361fnm" path="res://player/Main Ship - Base - Full health.png" id="1_2ipqk"]
 [ext_resource type="Script" path="res://player.gd" id="1_b1c8d"]
@@ -36,7 +36,6 @@ radius = 4.0
 height = 20.0
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(204, 170)
 script = ExtResource("1_b1c8d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -47,6 +46,3 @@ animation = &"alive"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_ofh20")
-
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(0, -13)
