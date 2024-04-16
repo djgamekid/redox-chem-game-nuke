@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bp0wyspt03gts"]
+[gd_scene load_steps=10 format=3 uid="uid://bp0wyspt03gts"]
 
 [ext_resource type="Script" path="res://level_2.gd" id="1_8ise5"]
 [ext_resource type="Texture2D" uid="uid://dt66rt3upufyf" path="res://backgrounds/background2/background 2.jpg" id="2_ckdcs"]
 [ext_resource type="Texture2D" uid="uid://2dk8h84prinq" path="res://backgrounds/background2/fog_background.png" id="3_i5axn"]
+[ext_resource type="PackedScene" uid="uid://2tvohq7u2ygs" path="res://player.tscn" id="4_kc4jn"]
+[ext_resource type="PackedScene" uid="uid://cge8mgijxca8v" path="res://kill_plane.tscn" id="5_qwgbu"]
 
 [sub_resource type="Shader" id="Shader_alxhd"]
 code = "shader_type canvas_item;
@@ -61,16 +63,18 @@ texture = ExtResource("2_ckdcs")
 texture_repeat = 2
 material = SubResource("ShaderMaterial_f55dm")
 layout_mode = 0
-offset_left = -944.0
-offset_top = -820.0
-offset_right = 2056.0
-offset_bottom = 1547.0
+offset_left = -926.0
+offset_top = -810.0
+offset_right = 2074.0
+offset_bottom = 1557.0
 texture = ExtResource("3_i5axn")
 
 [node name="PauseButton" type="Button" parent="."]
 layout_mode = 0
-offset_right = 98.0
-offset_bottom = 101.0
+offset_left = 1050.0
+offset_top = 2.0
+offset_right = 1148.0
+offset_bottom = 103.0
 text = "|| "
 
 [node name="ResumeButton" type="Button" parent="."]
@@ -119,6 +123,11 @@ Level 2 - The Equation's Secret:
 The journey deepens into the realms of science, where the left side of the equation holds the key to advancement. Observation and analysis will reveal the secrets needed to conquer this stage and forge onward.
 
 Remember, every challenge is an opportunity to grow both in the game and intellectually. Embrace the adventure, for your journey to mastery and enlightenment begins now!"
+
+[node name="Player" parent="." instance=ExtResource("4_kc4jn")]
+position = Vector2(286, 586)
+
+[node name="KillPlane" parent="." instance=ExtResource("5_qwgbu")]
 
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]

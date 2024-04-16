@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b21rqj8enfvc2"]
+[gd_scene load_steps=8 format=3 uid="uid://2tvohq7u2ygs"]
 
 [ext_resource type="Texture2D" uid="uid://cjjotyn361fnm" path="res://player/Main Ship - Base - Full health.png" id="1_2ipqk"]
 [ext_resource type="Script" path="res://player.gd" id="1_b1c8d"]
@@ -40,6 +40,8 @@ script = ExtResource("1_b1c8d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(-1.90735e-06, 2)
+scale = Vector2(2.4375, 2.47917)
 sprite_frames = SubResource("SpriteFrames_36ps7")
 animation = &"alive"
 
