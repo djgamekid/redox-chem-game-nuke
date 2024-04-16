@@ -19,6 +19,12 @@ func _on_start_game_button_pressed():
 
 func _on_instructions_button_pressed():
 	$InstructionsMessage.show()
+	$CloseButton.show()
+	$StageOptions.hide()
+	$StartGameButton.hide()
+	$InstructionsButton.hide()
+	$Selectlevel.hide()
+	$StageOptions.hide()
 	
 func _on_stage_options_item_selected(index):
 	selected_option = index
@@ -35,3 +41,12 @@ func get_scene_path(index):
 			GlobalVars.levelSelected = 3
 			return "res://level_3.tscn"
 	return ""
+
+
+func _on_close_button_pressed():
+	$InstructionsButton.show()
+	$StartGameButton.show()
+	$StageOptions.show()
+	$CloseButton.hide()
+	$InstructionsMessage.hide()
+	$Selectlevel.show()

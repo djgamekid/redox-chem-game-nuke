@@ -40,6 +40,7 @@ offset_right = 146.5
 offset_bottom = 33.5
 grow_horizontal = 2
 grow_vertical = 2
+button_pressed = true
 item_count = 3
 popup/item_0/text = "Level 1"
 popup/item_0/id = 0
@@ -66,9 +67,13 @@ metadata/_edit_use_anchors_ = true
 texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.833333
-anchor_top = 0.854938
-anchor_right = 0.979167
-anchor_bottom = 0.958333
+anchor_top = 0.861111
+anchor_right = 0.979166
+anchor_bottom = 0.950617
+offset_left = -5.99963
+offset_top = -3.9998
+offset_right = -5.99963
+offset_bottom = -3.99979
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("1_h5ml1")
@@ -112,6 +117,26 @@ Puzzle Elements: Navigate through levels filled with logic and creativity-based 
 Leaderboards: Rise to the top by competing with other players, showcasing your skills with high scores and speedy completions.
 Remember, every obstacle is a chance for growth, both in the game and in intellect. Embrace the adventure, as your journey toward mastery and enlightenment begins now!"
 
+[node name="Selectlevel" type="Label" parent="."]
+offset_left = 435.0
+offset_top = 244.0
+offset_right = 715.0
+offset_bottom = 284.0
+theme_override_fonts/font = ExtResource("1_h5ml1")
+theme_override_font_sizes/font_size = 33
+text = "Select The level"
+
+[node name="CloseButton" type="Button" parent="."]
+visible = false
+offset_left = 418.0
+offset_top = 586.0
+offset_right = 739.0
+offset_bottom = 631.0
+theme_override_fonts/font = ExtResource("1_h5ml1")
+theme_override_font_sizes/font_size = 30
+text = "Close"
+
 [connection signal="item_selected" from="StageOptions" to="." method="_on_stage_options_item_selected"]
 [connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="InstructionsButton" to="." method="_on_instructions_button_pressed"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
