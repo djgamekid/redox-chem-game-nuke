@@ -17,7 +17,9 @@ func _on_start_game_button_pressed():
 	else:
 		print("No option selected")
 
-
+func _on_instructions_button_pressed():
+	$InstructionsMessage.show()
+	
 func _on_stage_options_item_selected(index):
 	selected_option = index
 

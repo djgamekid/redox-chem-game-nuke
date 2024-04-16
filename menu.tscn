@@ -76,5 +76,42 @@ theme_override_font_sizes/font_size = 25
 text = "Instructions"
 metadata/_edit_use_anchors_ = true
 
+[node name="InstructionsMessage" type="RichTextLabel" parent="."]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -510.0
+offset_top = -582.0
+offset_right = 549.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Welcome to \"Redox: Protect The World\" - Your Guide to Success!
+
+Navigate the Adventure - Master the Basics:
+
+Embark on an epic journey where your skills and knowledge will shape the destiny of the world. To navigate this thrilling realm:
+
+Movement: Use A and S to maneuver left or right across diverse landscapes.
+Combat: Unleash a flurry of attacks by pressing the spacebar to fend off adversaries.
+Grasp these controls firmly, for they are the cornerstone of your triumph.
+
+Level 1 - Elemental Quest:
+Embark on your journey with a fusion of science and strategy. Decode the challenges ahead by acquainting yourself with the Periodic Table, with a focus on Oxidation Numbers. This knowledge will light your path through the unknown.
+
+Level 2 - The Equation's Secret:
+Delve deeper into the realms of science, where the left side of the equation unlocks progress. Observe and analyze to unveil the secrets that will lead you to victory.
+
+Unlock Extra Features:
+
+Power-ups: Seek out special items that enhance your abilities, turning the tide in your favor.
+Puzzle Elements: Navigate through levels filled with logic and creativity-based puzzles, offering layers of challenge and satisfaction.
+Leaderboards: Rise to the top by competing with other players, showcasing your skills with high scores and speedy completions.
+Remember, every obstacle is a chance for growth, both in the game and in intellect. Embrace the adventure, as your journey toward mastery and enlightenment begins now!"
+
 [connection signal="item_selected" from="StageOptions" to="." method="_on_stage_options_item_selected"]
 [connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="InstructionsButton" to="." method="_on_instructions_button_pressed"]
