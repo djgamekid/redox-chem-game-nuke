@@ -7,6 +7,7 @@
 size = Vector2(7.5, 36.3721)
 
 [node name="Bullet" type="Area2D" groups=["bullet"]]
+scale = Vector2(0.9, 0.9)
 script = ExtResource("1_668k3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

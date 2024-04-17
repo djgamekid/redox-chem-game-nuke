@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
 const bulletPath = preload('res://bullet.tscn')
+signal player_hit_answer
 
-
-func _physics_process(delta):
+func _ready():
+	$Bullet.hit_answer.connect("_on_bullet_hit_answer")
 	
-
+func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
@@ -29,3 +29,6 @@ func shoot():
 
 func _on_shoot_timer_timeout():
 	$ShootTimer.stop()
+	
+func _on_bullet_hit_answer():
+	emit_signal("player_hit_answer")
