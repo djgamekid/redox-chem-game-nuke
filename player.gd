@@ -15,11 +15,17 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	if Input.is_action_just_pressed('ui_accept'):
+	if Input.is_action_just_pressed('ui_accept') and $ShootTimer.is_stopped():
 		shoot()
 	move_and_slide()
 
 func shoot():
-	var bullet = bulletPath.instantiate()
-	get_parent().add_child(bullet)
-	bullet.position = $Marker2D.global_position
+	if $ShootTimer.is_stopped():
+		$ShootTimer.start() 
+		var bullet = bulletPath.instantiate()
+		get_parent().add_child(bullet)
+		bullet.position = $Marker2D.global_position
+
+
+func _on_shoot_timer_timeout():
+	$ShootTimer.stop()

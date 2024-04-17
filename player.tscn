@@ -52,3 +52,8 @@ shape = SubResource("CapsuleShape2D_ofh20")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(-2, -31)
+
+[node name="ShootTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

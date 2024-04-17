@@ -15,7 +15,6 @@ script = ExtResource("1_a3k8v")
 [node name="Hud" parent="." instance=ExtResource("3_tpe4e")]
 
 [node name="AnswerSpawn" parent="." instance=ExtResource("4_4k4xg")]
-position = Vector2(-29, -2)
 
 [node name="KillPlane" parent="." instance=ExtResource("5_yx64u")]
 
