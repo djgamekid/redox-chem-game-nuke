@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-
+const bulletPath = preload('res://bullet.tscn')
 
 
 func _physics_process(delta):
@@ -15,5 +15,11 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	if Input.is_action_just_pressed('ui_accept'):
+		shoot()
 	move_and_slide()
+
+func shoot():
+	var bullet = bulletPath.instantiate()
+	get_parent().add_child(bullet)
+	bullet.position = $Marker2D.global_position
