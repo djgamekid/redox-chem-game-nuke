@@ -341,8 +341,7 @@ var level2 = {
 	}
 }
 var questionSet
-var count = 23
-var answersPrintedCount = 0
+var count = 1
 var correct_answers_scene = preload("res://correct_answers.tscn")
 var incorrect_answers_scene = preload("res://incorrect_answers.tscn")
 

@@ -16,5 +16,8 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.is_in_group("correct"):
 		print("hit correct answer") #Placeholder
+		body.queue_free()
+		var answerSpawnInstance = get_node("/root/AnswerSpawn")
+		answerSpawnInstance.updateLvl1QuestionsAnswers()
 	else:
 		print("Incorrect answer hit") #Placeholder
