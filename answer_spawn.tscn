@@ -21,7 +21,7 @@ curve = SubResource("Curve2D_t1bcr")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
 position = Vector2(-28.5714, -265.332)
-rotation = 0.0831414
+rotation = 0.0831407
 
 [node name="QuestionLabel" type="Label" parent="."]
 offset_left = 712.0

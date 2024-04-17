@@ -5,13 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1yd5e"]
 size = Vector2(109.5, 24.5)
 
-[node name="IncorrectAnswers" type="Area2D"]
+[node name="IncorrectAnswers" type="CharacterBody2D"]
 position = Vector2(4, 18)
 script = ExtResource("1_xsgax")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(93, 16)
-shape = SubResource("RectangleShape2D_1yd5e")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 22.0
@@ -19,6 +15,6 @@ offset_top = 6.0
 offset_right = 157.0
 offset_bottom = 34.0
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Label"]
-position = Vector2(71, 10)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(93, 16)
 shape = SubResource("RectangleShape2D_1yd5e")

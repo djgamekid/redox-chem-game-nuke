@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var bullet_scene = get_node("/root/Lvl1/Player/Bullet")  # Get a reference to the "bullet" scene
+@onready var answer_spawn_scene = get_node("/root/Lvl1/AnswerSpawn")  # Get a reference to the "answer_spawn" scene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
