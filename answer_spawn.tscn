@@ -6,37 +6,38 @@
 
 [sub_resource type="Curve2D" id="Curve2D_t1bcr"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -28.5714, -265.332, 0, 0, 0, 0, 531.429, -52, 0, 0, 0, 0, 1251.43, -265.332, 0, 0, 0, 0, -28.5714, -265.332)
+"points": PackedVector2Array(0, 0, 0, 0, -28.5714, -265.332, 0, 0, 0, 0, 611.429, -211.999, 0, 0, 0, 0, 1251.43, -265.332, 0, 0, 0, 0, 738.046, -284.726, 0, 0, 0, 0, -28.5714, -265.332)
 }
-point_count = 4
+point_count = 5
 
 [node name="AnswerSpawn" type="Node2D"]
 script = ExtResource("1_vwc8m")
 Answers = ExtResource("2_fxttj")
 
 [node name="MobPath" type="Path2D" parent="."]
-position = Vector2(148, -39.8)
-scale = Vector2(0.7, -0.150001)
+position = Vector2(216, -64)
+scale = Vector2(0.6, -0.129)
 curve = SubResource("Curve2D_t1bcr")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
 position = Vector2(-28.5714, -265.332)
-rotation = 0.363977
+rotation = 0.0831414
 
 [node name="QuestionLabel" type="Label" parent="."]
-offset_left = 727.0
-offset_top = 3.0
-offset_right = 1156.0
-offset_bottom = 104.0
+offset_left = 712.0
+offset_top = 28.0
+offset_right = 1141.0
+offset_bottom = 129.0
 horizontal_alignment = 1
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="CompoundLabel" type="Label" parent="."]
 texture_filter = 1
-offset_left = 968.0
-offset_top = 96.0
-offset_right = 1012.0
-offset_bottom = 131.0
+offset_left = 920.0
+offset_top = 147.0
+offset_right = 964.0
+offset_bottom = 182.0
 scale = Vector2(3.86709, 2.1662)
 theme_override_fonts/font = ExtResource("3_8gdoj")
 theme_override_font_sizes/font_size = 10

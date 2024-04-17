@@ -3,16 +3,16 @@
 [ext_resource type="Script" path="res://correct_answers.gd" id="1_7jqqi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lyo2h"]
-size = Vector2(131, 20)
+size = Vector2(164.5, 36)
 
 [node name="CorrectAnswers" type="Area2D" groups=["correct"]]
 script = ExtResource("1_7jqqi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(133.75, 24)
+shape = SubResource("RectangleShape2D_lyo2h")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 19.0
 offset_right = 213.0
 offset_bottom = 32.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(117, 16)
-shape = SubResource("RectangleShape2D_lyo2h")
