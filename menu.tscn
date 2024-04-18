@@ -41,13 +41,9 @@ offset_bottom = 33.5
 grow_horizontal = 2
 grow_vertical = 2
 button_pressed = true
-item_count = 3
-popup/item_0/text = "Level 1"
+item_count = 1
+popup/item_0/text = "Redox"
 popup/item_0/id = 0
-popup/item_1/text = "Level 2"
-popup/item_1/id = 1
-popup/item_2/text = "Level 3"
-popup/item_2/id = 2
 
 [node name="StartGameButton" type="Button" parent="."]
 texture_filter = 1
@@ -100,22 +96,12 @@ Navigate the Adventure - Master the Basics:
 
 Embark on an epic journey where your skills and knowledge will shape the destiny of the world. To navigate this thrilling realm:
 
-Movement: Use A and S to maneuver left or right across diverse landscapes.
+Movement: Use left and right arrow keys to maneuver left or right across diverse landscapes.
 Combat: Unleash a flurry of attacks by pressing the spacebar to fend off adversaries.
 Grasp these controls firmly, for they are the cornerstone of your triumph.
 
-Level 1 - Elemental Quest:
-Embark on your journey with a fusion of science and strategy. Decode the challenges ahead by acquainting yourself with the Periodic Table, with a focus on Oxidation Numbers. This knowledge will light your path through the unknown.
-
-Level 2 - The Equation's Secret:
-Delve deeper into the realms of science, where the left side of the equation unlocks progress. Observe and analyze to unveil the secrets that will lead you to victory.
-
-Unlock Extra Features:
-
-Power-ups: Seek out special items that enhance your abilities, turning the tide in your favor.
-Puzzle Elements: Navigate through levels filled with logic and creativity-based puzzles, offering layers of challenge and satisfaction.
-Leaderboards: Rise to the top by competing with other players, showcasing your skills with high scores and speedy completions.
-Remember, every obstacle is a chance for growth, both in the game and in intellect. Embrace the adventure, as your journey toward mastery and enlightenment begins now!"
+Redox - Protect the World:
+Embark on your journey with a fusion of science and strategy. Decode the challenges ahead by acquainting yourself with the Periodic Table, with a focus on Oxidation Numbers. This knowledge will light your path through the unknown. Shoot the correct oxidation numbers to raise your score. Hit a score of 100 before the end of the 24 questions to save the world!"
 
 [node name="Selectlevel" type="Label" parent="."]
 offset_left = 435.0
