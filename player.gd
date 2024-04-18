@@ -1,11 +1,14 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
-const bulletPath = preload('res://bullet.tscn')
 signal player_hit_answer
+var bullet_instance = null
+@export var bullet_scene: PackedScene
+
 
 func _ready():
-	$Bullet.hit_answer.connect("_on_bullet_hit_answer")
+	# Instantiate the Bullet scene and add it as a child
+	pass
 	
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
@@ -22,13 +25,13 @@ func _physics_process(delta):
 func shoot():
 	if $ShootTimer.is_stopped():
 		$ShootTimer.start() 
-		var bullet = bulletPath.instantiate()
-		get_parent().add_child(bullet)
-		bullet.position = $Marker2D.global_position
-
+		var bullet_instance = bullet_scene.instantiate()
+		bullet_instance.position = $Marker2D.global_position
+		get_parent().add_child(bullet_instance)
+		bullet_instance.hit_answer.connect(_on_bullet_hit_answer)
 
 func _on_shoot_timer_timeout():
 	$ShootTimer.stop()
 	
 func _on_bullet_hit_answer():
-	emit_signal("player_hit_answer")
+	player_hit_answer.emit()

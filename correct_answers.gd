@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed := 25.0
+@export var speed := 25
 var direction := Vector2.DOWN
 # Called when the node enters the scene tree for the first time.
 func _ready():

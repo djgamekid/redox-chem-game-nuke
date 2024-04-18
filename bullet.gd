@@ -20,6 +20,5 @@ func _on_body_entered(body):
 		GlobalVars.score += 10
 	else:
 		print("Incorrect answer hit") #Placeholder
-	emit_signal("hit_answer")
-	body.queue_free()
+	hit_answer.emit()
 	queue_free()

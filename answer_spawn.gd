@@ -344,16 +344,19 @@ var questionSet
 var count = 1
 var correct_answers_scene = preload("res://correct_answers.tscn")
 var incorrect_answers_scene = preload("res://incorrect_answers.tscn")
-
+var last_spawned_question = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Level1.
+	pass
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if GlobalVars.score == 100:
+		get_tree().change_scene_to_file("res://game_win.tscn")
 	
 func updateLvl1QuestionsAnswers():
+	get_tree().call_group("correct", "queue_free")
+	get_tree().call_group("incorrect", "queue_free")
 	#set question and compund for question
 	$QuestionLabel.text = (questionSet["question"])
 	$CompoundLabel.text = (questionSet[str(count)]["compound"])
@@ -379,7 +382,7 @@ func updateLvl1QuestionsAnswers():
 	
 	var mob_spawn_location = get_node("MobPath/MobSpawnLocation")
 	
-	#Set randrom spawn location for each answer along MobPath
+#Set randrom spawn location for each answer along MobPath
 	mob_spawn_location.progress_ratio = randf()
 	correctAnswer.position = mob_spawn_location.position
 	mob_spawn_location.progress_ratio = randf()
@@ -396,7 +399,7 @@ func updateLvl1QuestionsAnswers():
 	#Spawn each question with a 2 second delay
 	for child in children:
 		get_parent().add_child(child)
-		await get_tree().create_timer(2.0).timeout # Wait for 2 seconds
+		await get_tree().create_timer(3.0).timeout # Wait for 3 seconds
 	
 	if count < 24:
 		count += 1 #Update Question count
@@ -410,4 +413,7 @@ func _on_start_button_pressed():
 	elif GlobalVars.levelSelected == 2:
 		questionSet = level2
 	## ADD LEVEL 3 HERE.
+	updateLvl1QuestionsAnswers()
+
+func _on_player_hit_answer():
 	updateLvl1QuestionsAnswers()
